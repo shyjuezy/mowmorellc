@@ -136,7 +136,7 @@ export default function Footer() {
                 <MapPin className="h-4 w-4 mr-2" />
                 <span>123 Green Street, Lawn City</span>
               </div>
-              <Button className="mt-2 w-full bg-[#2C5F2D] hover:bg-[#1a3e1a]">
+              <Button className="mt-2 w-full bg-primary hover:bg-primary-hover">
                 <Link href="/contact">Book Service</Link>
               </Button>
             </div>

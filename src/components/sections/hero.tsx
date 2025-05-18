@@ -30,7 +30,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#2C5F2D] hover:bg-[#1a3e1a]"
+                className="bg-primary hover:bg-primary-hover"
               >
                 <Link href="/contact">
                   <Wrench className="mr-2 h-5 w-5" />
@@ -41,7 +41,7 @@ export default function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="bg-white text-[#2C5F2D] border-[#2C5F2D] hover:bg-[#F5F5F5]"
+                className="bg-white text-primary border-primary hover:bg-[#F5F5F5]"
               >
                 <Link href="/services">
                   <ShoppingBag className="mr-2 h-5 w-5" />

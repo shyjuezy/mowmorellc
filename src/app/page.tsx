@@ -20,28 +20,28 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: <Truck className="h-10 w-10 text-[#2C5F2D]" />,
+                icon: <Truck className="h-10 w-10 text-primary" />,
                 title: "Mobile Service",
                 description:
-                  "We come to you, saving time and hassle with our fully equipped mobile workshop.",
+                  "We come to you! Our mobile service brings expert equipment repair right to your doorstep.",
               },
               {
-                icon: <Tool className="h-10 w-10 text-[#2C5F2D]" />,
-                title: "Expert Technicians",
+                icon: <Tool className="h-10 w-10 text-primary" />,
+                title: "Shop Service",
                 description:
-                  "Certified professionals with years of experience in lawn mower repair.",
+                  "Drop off your equipment at our fully equipped workshop for comprehensive repairs and maintenance.",
               },
               {
-                icon: <ShoppingBag className="h-10 w-10 text-[#2C5F2D]" />,
-                title: "Quality Parts",
+                icon: <ShoppingBag className="h-10 w-10 text-primary" />,
+                title: "Sales",
                 description:
-                  "We use only genuine or high-quality compatible parts for all repairs.",
+                  "Browse our selection of high-quality lawn care equipment, accessories, and parts.",
               },
               {
-                icon: <Star className="h-10 w-10 text-[#2C5F2D]" />,
-                title: "Satisfaction Guaranteed",
+                icon: <Star className="h-10 w-10 text-primary" />,
+                title: "Expert Team",
                 description:
-                  "Our work is backed by a 90-day warranty on all repairs and services.",
+                  "Our certified technicians have years of experience with all brands and types of lawn equipment.",
               },
             ].map((feature, index) => (
               <div

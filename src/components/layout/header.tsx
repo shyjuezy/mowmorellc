@@ -45,7 +45,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-x-2">
-            <span className="text-2xl font-bold text-[#2C5F2D] ">
+            <span className="text-2xl font-bold text-primary ">
               <Image
                 src="/logo.png"
                 alt="MowMore LLC"
@@ -61,20 +61,28 @@ export default function Header() {
         <div className="flex lg:hidden">
           <Button variant="outline" size="icon" asChild className="mr-2">
             <Link href="tel:+15551234567">
-              <Phone className="h-5 w-5 text-[#2C5F2D]" />
+              <Phone className="h-5 w-5 text-primary" />
             </Link>
           </Button>
 
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon">
-                <Menu className="h-5 w-5 text-[#2C5F2D]" />
+                <Menu className="h-5 w-5 text-primary" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle className="text-[#2C5F2D]">MowMore LLC</SheetTitle>
+                <SheetTitle>
+                  <Image
+                    src="/logo.png"
+                    alt="MowMore LLC"
+                    width={60}
+                    height={60}
+                    className="object-contain"
+                  />
+                </SheetTitle>
               </SheetHeader>
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-200">
@@ -90,7 +98,7 @@ export default function Header() {
                     ))}
                   </div>
                   <div className="py-6">
-                    <Button className="w-full bg-[#2C5F2D] hover:bg-[#1a3e1a]">
+                    <Button className="w-full bg-primary hover:bg-primary-hover">
                       <Link href="/contact">Book Service</Link>
                     </Button>
                   </div>
@@ -106,7 +114,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-base font-medium text-gray-900 hover:text-[#2C5F2D] hover:border-b-2 border-b-2 border-transparent hover:border-b-[#2C5F2D] pb-1 transition-all duration-300"
+              className="text-base font-medium text-gray-900 hover:text-primary hover:border-b-2 border-b-2 border-transparent hover:border-b-primary pb-1 transition-all duration-300"
             >
               {item.name}
             </Link>
@@ -114,7 +122,7 @@ export default function Header() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button className="bg-[#2C5F2D] hover:bg-[#1a3e1a]">
+          <Button variant="default" className="hover:bg-primary-hover">
             <Link href="/contact">Book Service</Link>
           </Button>
         </div>

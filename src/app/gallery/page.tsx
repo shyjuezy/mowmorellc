@@ -123,7 +123,7 @@ export default function GalleryPage() {
               onClick={() => setActiveCategory(category.id)}
               className={
                 activeCategory === category.id
-                  ? "bg-[#2C5F2D] hover:bg-[#1a3e1a]"
+                  ? "bg-primary hover:bg-primary-hover"
                   : ""
               }
             >
@@ -180,7 +180,7 @@ export default function GalleryPage() {
               visit to our shop or book a mobile repair service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-[#2C5F2D] hover:bg-[#1a3e1a]">
+              <Button asChild className="bg-primary hover:bg-primary-hover">
                 <Link href="/contact">Contact Us</Link>
               </Button>
               <Button asChild variant="outline">

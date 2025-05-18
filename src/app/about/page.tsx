@@ -189,7 +189,7 @@ export default function AboutPage() {
       <div className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <div className="inline-block px-4 py-1 bg-[#2C5F2D] bg-opacity-20 text-[#2C5F2D] font-medium rounded-full mb-4">
+            <div className="inline-block px-4 py-1 bg-primary bg-opacity-20 text-primary-foreground font-medium rounded-full mb-4">
               Our Values
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -278,7 +278,7 @@ export default function AboutPage() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-[#2C5F2D]"
+              className="border-white text-white hover:bg-white hover:text-primary"
             >
               <Link href="/contact">
                 Contact Us Today <ChevronRight className="ml-2 h-5 w-5" />

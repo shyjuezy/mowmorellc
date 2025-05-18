@@ -73,7 +73,11 @@ export default function GalleryPreview() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button asChild size="lg" className="bg-[#2C5F2D] hover:bg-[#1a3e1a]">
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary hover:bg-primary-hover"
+          >
             <Link href="/gallery">
               View Full Gallery <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

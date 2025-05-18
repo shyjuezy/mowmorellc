@@ -37,7 +37,7 @@ export default function MapSection() {
           <h2 className="text-3xl md:text-4xl font-bold">Service Area</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
             Our mobile repair service covers a wide area. Check if we service
-            your location and what days we're in your neighborhood.
+            your location and what days we&apos;re in your neighborhood.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function MapSection() {
                     variant={activeArea === key ? "default" : "outline"}
                     className={`w-full justify-start ${
                       activeArea === key
-                        ? "bg-[#2C5F2D] hover:bg-[#1a3e1a]"
+                        ? "bg-primary hover:bg-primary-hover"
                         : ""
                     }`}
                     onClick={() => setActiveArea(key)}
@@ -82,7 +82,7 @@ export default function MapSection() {
                       activeArea as keyof typeof serviceAreas
                     ].cities.map((city, index) => (
                       <li key={index} className="text-sm flex items-center">
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#2C5F2D] mr-2"></span>
+                        <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2"></span>
                         {city}
                       </li>
                     ))}
@@ -106,7 +106,7 @@ export default function MapSection() {
                     <div
                       className={`absolute top-0 left-1/4 right-1/4 h-1/4 ${
                         activeArea === "north"
-                          ? "bg-[#2C5F2D] bg-opacity-50"
+                          ? "bg-primary bg-opacity-50"
                           : "bg-gray-400 bg-opacity-20"
                       } rounded-lg flex items-center justify-center cursor-pointer transition-colors`}
                       onClick={() => setActiveArea("north")}
@@ -120,7 +120,7 @@ export default function MapSection() {
                     <div
                       className={`absolute bottom-0 left-1/4 right-1/4 h-1/4 ${
                         activeArea === "south"
-                          ? "bg-[#2C5F2D] bg-opacity-50"
+                          ? "bg-primary bg-opacity-50"
                           : "bg-gray-400 bg-opacity-20"
                       } rounded-lg flex items-center justify-center cursor-pointer transition-colors`}
                       onClick={() => setActiveArea("south")}
@@ -134,7 +134,7 @@ export default function MapSection() {
                     <div
                       className={`absolute top-1/4 bottom-1/4 right-0 w-1/4 ${
                         activeArea === "east"
-                          ? "bg-[#2C5F2D] bg-opacity-50"
+                          ? "bg-primary bg-opacity-50"
                           : "bg-gray-400 bg-opacity-20"
                       } rounded-lg flex items-center justify-center cursor-pointer transition-colors`}
                       onClick={() => setActiveArea("east")}
@@ -148,7 +148,7 @@ export default function MapSection() {
                     <div
                       className={`absolute top-1/4 bottom-1/4 left-0 w-1/4 ${
                         activeArea === "west"
-                          ? "bg-[#2C5F2D] bg-opacity-50"
+                          ? "bg-primary bg-opacity-50"
                           : "bg-gray-400 bg-opacity-20"
                       } rounded-lg flex items-center justify-center cursor-pointer transition-colors`}
                       onClick={() => setActiveArea("west")}
@@ -160,7 +160,7 @@ export default function MapSection() {
 
                     {/* Center point - shop location */}
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg">
-                      <MapPin className="h-6 w-6 text-[#2C5F2D]" />
+                      <MapPin className="h-6 w-6 text-primary" />
                     </div>
 
                     <div className="absolute bottom-4 right-4 bg-white p-2 rounded-lg shadow-xs text-xs">
@@ -175,10 +175,10 @@ export default function MapSection() {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">
-            Don't see your area? Contact us to check if we can accommodate your
-            location.
+            Don&apos;t see your area? Contact us to check if we can accommodate
+            your location.
           </p>
-          <Button asChild className="bg-[#2C5F2D] hover:bg-[#1a3e1a]">
+          <Button asChild className="bg-primary hover:bg-primary-hover">
             <a href="/contact">Check Your Area</a>
           </Button>
         </div>
