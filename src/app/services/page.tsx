@@ -2,6 +2,7 @@ import { Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ServiceCTA from "@/components/sections/cta";
+import Image from "next/image";
 
 export default function ServicesPage() {
   return (
@@ -75,11 +76,12 @@ export default function ServicesPage() {
               </Button>
             </div>
 
-            <div className="rounded-lg overflow-hidden">
-              <img
+            <div className="rounded-lg overflow-hidden relative h-full w-full">
+              <Image
                 src="https://images.pexels.com/photos/5971203/pexels-photo-5971203.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
                 alt="Mobile Lawn Mower Repair"
                 className="w-full h-auto object-cover rounded-lg"
+                fill
               />
             </div>
           </div>
@@ -90,11 +92,12 @@ export default function ServicesPage() {
       <div id="shop" className="py-16 md:py-24 bg-[#F5F5F5]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 rounded-lg overflow-hidden">
-              <img
+            <div className="order-2 lg:order-1 rounded-lg overflow-hidden relative h-full w-full">
+              <Image
                 src="https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
                 alt="In-Shop Lawn Mower Repair"
                 className="w-full h-auto object-cover rounded-lg"
+                fill
               />
             </div>
 
@@ -209,11 +212,12 @@ export default function ServicesPage() {
                 key={index}
                 className="bg-white rounded-lg shadow-md overflow-hidden"
               >
-                <div className="h-56 relative overflow-hidden">
-                  <img
+                <div className="h-56 relative overflow-hidden w-full">
+                  <Image
                     src={mower.image}
                     alt={mower.title}
                     className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                    fill
                   />
                 </div>
                 <div className="p-6">

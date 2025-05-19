@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -24,6 +25,7 @@ const navigation = [
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,19 +112,33 @@ export default function Header() {
 
         {/* Desktop menu */}
         <div className="hidden lg:flex lg:gap-x-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-base font-medium text-gray-900 hover:text-primary hover:border-b-2 border-b-2 border-transparent hover:border-b-primary pb-1 transition-all duration-300"
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const isActive =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(item.href));
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={cn(
+                  "text-base font-medium text-gray-900 hover:text-primary hover:border-b-2 border-b-2 pb-1 transition-all duration-300",
+                  isActive
+                    ? "border-b-primary text-primary"
+                    : "border-transparent"
+                )}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button variant="default" className="hover:bg-primary-hover">
+          <Button
+            variant="default"
+            className="hover:bg-primary-hover active:bg-primary-hover"
+          >
             <Link href="/contact">Book Service</Link>
           </Button>
         </div>

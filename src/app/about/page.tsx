@@ -69,11 +69,6 @@ export default function AboutPage() {
             </div>
 
             <div className="relative rounded-lg overflow-hidden shadow-lg w-full h-full">
-              {/* <img
-                src="https://images.pexels.com/photos/4195342/pexels-photo-4195342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
-                alt="MowMore LLC founder"
-                className="w-full h-auto"
-              /> */}
               <Image
                 src="/logo.png"
                 alt="MowMore LLC founder"
@@ -146,11 +141,6 @@ export default function AboutPage() {
                 className="bg-white rounded-lg shadow-md overflow-hidden"
               >
                 <div className="h-64 relative overflow-hidden">
-                  {/* <img
-                    src={member.image}
-                    alt={member.name}
-                    className="h-full w-full object-cover"
-                  /> */}
                   <Image
                     src={member.image}
                     alt={member.name}

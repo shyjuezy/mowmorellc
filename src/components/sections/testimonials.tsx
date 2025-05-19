@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const testimonials = [
   {
@@ -114,11 +115,15 @@ export default function TestimonialsSection() {
                       &quot;{testimonial.quote}&quot;
                     </blockquote>
                     <div className="flex items-center justify-center">
-                      <img
-                        src={testimonial.avatar}
-                        alt={testimonial.author}
-                        className="h-12 w-12 rounded-full object-cover mr-4"
-                      />
+                      <Avatar className="h-12 w-12 ring-2 ring-primary/90 mx-2">
+                        <AvatarImage
+                          src={testimonial.avatar}
+                          alt={testimonial.author}
+                        />
+                        <AvatarFallback>
+                          {testimonial.author.charAt(0)}
+                        </AvatarFallback>
+                      </Avatar>
                       <div>
                         <div className="font-medium">{testimonial.author}</div>
                         <div className="text-sm text-gray-600">

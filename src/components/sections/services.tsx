@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const services = [
   {
@@ -67,9 +68,10 @@ export default function ServicesSection() {
               className="bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]"
             >
               <div className="h-56 relative overflow-hidden">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
+                  fill
                   className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>

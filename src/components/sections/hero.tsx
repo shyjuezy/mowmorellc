@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Wrench, ShoppingBag, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function HeroSection() {
   return (
@@ -60,12 +61,10 @@ export default function HeroSection() {
                     "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
                     "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
                   ].map((avatar, index) => (
-                    <img
-                      key={index}
-                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
-                      src={avatar}
-                      alt={`Customer ${index + 1}`}
-                    />
+                    <Avatar key={index} className="h-8 w-8 ring-2 ring-white">
+                      <AvatarImage src={avatar} alt={`Customer ${index + 1}`} />
+                      <AvatarFallback>{index + 1}</AvatarFallback>
+                    </Avatar>
                   ))}
                 </div>
                 <div className="ml-3">
