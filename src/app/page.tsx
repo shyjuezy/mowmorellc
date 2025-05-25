@@ -46,7 +46,7 @@ export default function Home() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md transition-transform hover:translate-y-[-5px]"
+                className="bg-white p-6 rounded-lg shadow-md transition-transform hover:translate-y-[-5px] border border-gray-200"
               >
                 <div className="mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
