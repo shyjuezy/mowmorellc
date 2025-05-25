@@ -19,8 +19,15 @@ export default function HeroSection() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
           <div className="bg-black/50 p-6 rounded-lg backdrop-blur-xs">
-            <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
+            {/* <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
               Professional Lawn Mower Repair & Sales
+            </h1> */}
+            <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl leading-tight">
+              Professional Lawn Mower
+              <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                {" "}
+                Repair & Sales
+              </span>
             </h1>
             <p className="mt-6 text-lg leading-7 text-white">
               Expert mobile and in-shop repair services for all makes and

@@ -186,6 +186,31 @@
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Parallax optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Smooth scrolling for better parallax effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimizations for parallax */
+@media (prefers-reduced-motion: reduce) {
+  .will-change-transform {
+    transform: none !important;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
