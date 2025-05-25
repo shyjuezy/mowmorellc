@@ -12,6 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
@@ -25,6 +26,7 @@ const navigation = [
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -36,6 +38,10 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header
@@ -67,7 +73,7 @@ export default function Header() {
             </Link>
           </Button>
 
-          <Sheet>
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon">
                 <Menu className="h-5 w-5 text-primary" />
@@ -93,6 +99,7 @@ export default function Header() {
                       <Link
                         key={item.name}
                         href={item.href}
+                        onClick={closeMenu}
                         className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md"
                       >
                         {item.name}
@@ -101,7 +108,9 @@ export default function Header() {
                   </div>
                   <div className="py-6">
                     <Button className="w-full bg-primary hover:bg-primary-hover">
-                      <Link href="/contact">Book Service</Link>
+                      <Link href="/contact" onClick={closeMenu}>
+                        Book Service
+                      </Link>
                     </Button>
                   </div>
                 </div>
